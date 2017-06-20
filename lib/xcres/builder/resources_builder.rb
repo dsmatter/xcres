@@ -30,7 +30,7 @@ EOS
 public extension %s.Strings {
     public var localizedValue: String {
         return NSLocalizedString(self.rawValue,
-                                 bundle: NSBundle(forClass: R.self),
+                                 bundle: Bundle(for: R.self),
                                  comment: "")
     }
 }
