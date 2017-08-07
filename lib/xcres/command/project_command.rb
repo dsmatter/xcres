@@ -13,10 +13,7 @@ class XCRes::ProjectCommand < XCRes::Command
   option ['-t', '--target'], 'TARGET', 'Target to search & analyze', attribute_name: :target_name
   option ['-x', '--exclude'], 'FILE_PATTERN', 'File pattern which should be excluded (default: ["InfoPlist.strings"])', multivalued: true, attribute_name: :exclude_file_patterns, default: ['InfoPlist.strings']
   option ['-n', '--name'], 'NAME', 'Name of the resources constant (default: `basename OUTPUT_PATH`)', attribute_name: :resources_constant_name
-  option ['-l', '--language'], 'LANGUAGE', 'Default language to build the keys', attribute_name: :default_language do |language|
-    raise ArgumentError.new 'Expected a two-letter code conforming to ISO 639-1 as LANGUAGE' unless String(language).length == 2
-    language
-  end
+  option ['-l', '--language'], 'LANGUAGE', 'Default language to build the keys', attribute_name: :default_language
 
   # Define parameter in an inheritable way
   #
