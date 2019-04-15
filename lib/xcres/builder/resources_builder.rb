@@ -28,7 +28,7 @@ EOS
 
   SWIFT_EXTENSIONS = <<EOS
 public extension %s.Strings {
-    public var localizedValue: String {
+    var localizedValue: String {
         return NSLocalizedString(self.rawValue,
                                  bundle: Bundle(for: R.self),
                                  comment: "")
